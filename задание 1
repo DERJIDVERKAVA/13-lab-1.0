@@ -1,0 +1,39 @@
+using System;
+
+public abstract class Employee
+{
+    public string Name { get; set; }
+    public string Position { get; set; }
+    public decimal Salary { get; set; }
+    public DateTime HireDate { get; set; }
+}
+
+public class Manager : Employee
+{
+    public int TeamSize { get; set; }
+
+    public void ConductMeeting()
+    {
+        Console.WriteLine("Провожу собрание команды");
+    }
+}
+
+public class Developer : Employee
+{
+    public string ProgrammingLanguage { get; set; }
+
+    public void WriteCode()
+    {
+        Console.WriteLine("Пишу код на " + ProgrammingLanguage);
+    }
+}
+
+public class Director : Employee
+{
+    public string Department { get; set; }
+
+    public void ApproveBudget()
+    {
+        Console.WriteLine("Утверждаю бюджет отдела " + Department);
+    }
+}
