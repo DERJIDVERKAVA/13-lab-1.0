@@ -1,0 +1,27 @@
+using System;
+
+public abstract class Course
+{
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public string Author { get; set; }
+    public decimal Price { get; set; }
+}
+
+public class VideoCourse : Course
+{
+    public int VideoCount { get; set; }
+    public int TotalDuration { get; set; }
+}
+
+public class TextCourse : Course
+{
+    public int ChapterCount { get; set; }
+    public int TextVolume { get; set; }
+}
+
+public class InteractiveCourse : Course
+{
+    public int ExerciseCount { get; set; }
+    public string CheckingSystem { get; set; }
+}
