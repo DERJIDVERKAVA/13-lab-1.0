@@ -1,0 +1,33 @@
+using System;
+
+public abstract class Animal
+{
+    public string Species { get; set; }
+    public int Age { get; set; }
+    public string Habitat { get; set; }
+    public string Diet { get; set; }
+}
+
+public class Mammal : Animal
+{
+    public string FurType { get; set; }
+    public int GestationPeriod { get; set; }
+}
+
+public class Bird : Animal
+{
+    public double Wingspan { get; set; }
+    public string NestingType { get; set; }
+}
+
+public class Reptile : Animal
+{
+    public string SkinType { get; set; }
+    public double EnvironmentTemperature { get; set; }
+}
+
+public class Fish : Animal
+{
+    public string ScaleType { get; set; }
+    public int HabitatDepth { get; set; }
+}
