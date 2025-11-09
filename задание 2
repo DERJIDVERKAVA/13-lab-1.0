@@ -1,0 +1,24 @@
+using System;
+
+public abstract class BankAccount
+{
+    public string AccountNumber { get; set; }
+    public decimal Balance { get; set; }
+    public string Owner { get; set; }
+}
+
+public class CheckingAccount : BankAccount
+{
+    public decimal OverdraftLimit { get; set; }
+}
+
+public class SavingsAccount : BankAccount
+{
+    public decimal InterestRate { get; set; }
+}
+
+public class CreditAccount : BankAccount
+{
+    public decimal CreditLimit { get; set; }
+    public DateTime RepaymentDate { get; set; }
+}
